@@ -1,0 +1,25 @@
+<div>
+  <form #calcCdbForm="ngForm" name="cdbform" (ngSubmit)="getCdbResults()">    
+    <div>
+      <label for="cdbParams.initialValue">
+        Valor inicial
+      </label>
+      <input name="initialValue" [(ngModel)]="cdbParams.initialValue">
+    </div>
+    <div>
+      <label for="cdbParams.months">
+        Meses
+      </label>
+      <input name="months" [(ngModel)]="cdbParams.months">
+    </div>
+    <div>
+      <button type="submit">Calcular</button>
+    </div>
+    <p name="grossValue">
+      Valor Bruto: {{ cdbResults.grossValue }}
+    </p>
+    <p name="netValue">
+      Valor Líquido: {{ cdbResults.netValue }}
+    </p>
+  </form>
+</div>
